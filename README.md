@@ -72,4 +72,4 @@ php artisan migrate:fresh --seed
 php artisan serve  
 
 ## 🎯 Done
-Your PMS Laravel project is now ready 🚀
+This PMS Laravel project serves as a backend API only. 🚀
