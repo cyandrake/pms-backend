@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Product extends Model
+{
+    use HasFactory;
+
+    protected $table = 'product_table';
+
+    protected $fillable = [
+        'product_name',
+        'product_description',
+        'quantity',
+        'price',
+        'status',
+    ];
+
+    protected $casts = [
+        'quantity' => 'integer',
+        'price' => 'decimal:2',
+        'status' => 'boolean',
+    ];
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+}
